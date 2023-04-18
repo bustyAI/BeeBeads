@@ -1,9 +1,11 @@
 package com.example.beebeads;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "user_table")
+// User Table
+@Entity(tableName = AppDatebase.USER_TABLE)
 public class User {
     @PrimaryKey(autoGenerate = true)
     private int userId;
@@ -11,9 +13,9 @@ public class User {
     private String username;
     private String password;
 
-    private boolean admin;
+    private int admin;
 
-    public User(String username, String password, boolean admin) {
+    public User(String username, String password, int admin) {
         this.username = username;
         this.password = password;
         this.admin = admin;
@@ -43,11 +45,11 @@ public class User {
         this.password = password;
     }
 
-    public boolean isAdmin() {
+    public int getAdmin() {
         return admin;
     }
 
-    public void setAdmin(boolean admin) {
+    public void setAdmin(int admin) {
         this.admin = admin;
     }
 }
