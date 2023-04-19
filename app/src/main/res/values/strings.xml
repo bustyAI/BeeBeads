@@ -7,4 +7,10 @@
     <string name="don_t_have_an_account">Don\'t Have An Account ?</string>
     <string name="click_me">Click Me!</string>
     <string name="empty">Did you forget something?</string>
+    <string name="welcome_to_beebeads">Welcome to BeeBeads</string>
+    <string name="enter_your_initial_inventory">Enter your initial inventory</string>
+    <string name="red_bead_amount">red bead amount</string>
+    <string name="green_bead_amount">green bead amount</string>
+    <string name="blue_bead_amount">blue bead amount</string>
+    <string name="stash_your_inventory">Stash your Inventory</string>
 </resources>

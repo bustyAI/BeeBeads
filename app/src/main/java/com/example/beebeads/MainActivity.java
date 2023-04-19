@@ -53,5 +53,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        userViewModel.getAllUsers().observe(this, users -> {
+            StringBuilder builder = new StringBuilder();
+            for (User user : users){
+                Log.d("User", "Hey " + user.getUsername() + " is this your password? " +
+                        user.getPassword() + " admin? " + user.getAdmin() + " userId? " + user.getUserId());
+                builder.append(user.getUsername()).append(" ");
+            }
+
+        });
+
+
     }
 }

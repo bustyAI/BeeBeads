@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/inventory_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/welcome_to_beebeads"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:id="@+id/enter_inventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/enter_your_initial_inventory"
+        android:textSize="20sp" />
+
+    <TableRow android:layout_marginTop="60dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:hint="@string/red_bead_amount"
+            android:gravity="center"
+            android:textColorHint="#ff6961" />
+    </TableRow>
+
+    <TableRow android:layout_marginTop="50dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:hint="@string/green_bead_amount"
+            android:gravity="center"
+            android:textColorHint="#77DD77" />
+    </TableRow>
+
+    <TableRow android:layout_marginTop="60dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:hint="@string/blue_bead_amount"
+            android:gravity="center"
+            android:textColorHint="#0000FF" />
+    </TableRow>
+
+    <TableRow android:layout_marginTop="60dp">
+        <Button
+            android:layout_column="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/stash_your_inventory"
+            />
+    </TableRow>
+
+</TableLayout>
