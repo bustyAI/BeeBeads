@@ -14,7 +14,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class, Bead.class}, version = 1)
 public abstract class AppDatebase extends RoomDatabase {
 
     public static final String DB_NAME = "BEAD_DATABASE";
@@ -27,8 +27,9 @@ public abstract class AppDatebase extends RoomDatabase {
 
     // This is used to access our database operation methods
     public abstract UserDao userDao();
+    public abstract BeadDao beadDao();
 
-    public static final int THREADS = 4;
+    public static final int THREADS = 8;
 
     // For execution of our db methods not on main thread
     public static final ExecutorService dbExecutor = Executors.newFixedThreadPool(THREADS);
@@ -53,10 +54,11 @@ public abstract class AppDatebase extends RoomDatabase {
 
             dbExecutor.execute(() -> {
                 UserDao userDao = instance.userDao();
-
                 User user = new User("Monty", "123456789", 0);
                 userDao.insert(user);
                 userDao.insert(new User("Python", "gitgood", 1));
+
+
             });
         }
     };
