@@ -20,6 +20,8 @@ public abstract class AppDatebase extends RoomDatabase {
     public static final String DB_NAME = "BEAD_DATABASE";
     public static final String USER_TABLE = "USER_TABLE";
 
+    public static final String BEAD_TABLE = "BEAD_TABLE";
+
     // For Singleton strategy
     private static volatile AppDatebase instance;
 

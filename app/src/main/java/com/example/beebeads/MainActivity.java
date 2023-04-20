@@ -5,6 +5,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.room.Room;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -48,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                         toString(), 0);
 
                 UserViewModel.insert(user);
+                Intent newUserIntent = new Intent(MainActivity.this, NewUserActivity.class);
+                startActivity(newUserIntent);
+
             } else {
                 Toast.makeText(this, R.string.empty, Toast.LENGTH_SHORT).show();
             }
