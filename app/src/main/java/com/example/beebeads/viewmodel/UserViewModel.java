@@ -1,10 +1,14 @@
-package com.example.beebeads;
+package com.example.beebeads.viewmodel;
 
 import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+
+import com.example.beebeads.Bead;
+import com.example.beebeads.User;
+import com.example.beebeads.repository.AppRepository;
 
 import java.util.List;
 
@@ -43,6 +47,7 @@ public class UserViewModel extends AndroidViewModel {
     public static void deleteAll(){
         repository.deleteAll();
     }
+
 
     /**
      * Bead methods

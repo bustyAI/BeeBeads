@@ -1,12 +1,14 @@
-package com.example.beebeads;
+package com.example.beebeads.repository;
 
 import android.app.Application;
-import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.Update;
+
+import com.example.beebeads.Bead;
+import com.example.beebeads.User;
+import com.example.beebeads.db.AppDatebase;
+import com.example.beebeads.db.dao.BeadDao;
+import com.example.beebeads.db.dao.UserDao;
 
 import java.util.List;
 

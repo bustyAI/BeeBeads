@@ -3,6 +3,8 @@ package com.example.beebeads;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.example.beebeads.db.AppDatebase;
+
 // User Table
 @Entity(tableName = AppDatebase.USER_TABLE)
 public class User {

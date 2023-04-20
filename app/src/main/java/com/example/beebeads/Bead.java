@@ -1,9 +1,9 @@
 package com.example.beebeads;
 
-import android.content.Intent;
-
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
+import com.example.beebeads.db.AppDatebase;
 
 @Entity(tableName = AppDatebase.BEAD_TABLE)
 public class Bead {

@@ -1,6 +1,5 @@
-package com.example.beebeads;
+package com.example.beebeads.db;
 import android.content.Context;
-import android.os.AsyncTask;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
@@ -8,9 +7,11 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import java.lang.reflect.Executable;
-import java.util.List;
-import java.util.concurrent.Executor;
+import com.example.beebeads.Bead;
+import com.example.beebeads.db.dao.BeadDao;
+import com.example.beebeads.User;
+import com.example.beebeads.db.dao.UserDao;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

@@ -1,9 +1,7 @@
-package com.example.beebeads;
+package com.example.beebeads.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +10,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Arrays;
-import java.util.List;
+import com.example.beebeads.R;
+import com.example.beebeads.User;
+import com.example.beebeads.viewmodel.UserViewModel;
+import com.example.beebeads.db.dao.UserDao;
 
 public class MainActivity extends AppCompatActivity {
     private UserViewModel userViewModel;
@@ -26,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button loginButton;
     private Button signUpButton;
+
+    private UserDao userDao;
 
 
     @Override
@@ -54,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
             } else {
                 Toast.makeText(this, R.string.empty, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
             }
         });
 
